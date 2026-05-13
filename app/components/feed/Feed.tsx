@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { JSX, useEffect, useState } from "react";
 import { SidesDTO } from "@/app/types/sides";
 import Image from "next/image";
 
 const Feed = (): JSX.Element => {
-  const [recipes, setRecipes] = useState([]);
+  const [recipes, setRecipes] = useState<SidesDTO[]>([]);
 
   const fetchImages = async () => {
     const response = await fetch("http://localhost:8080/sides");
